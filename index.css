@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto";
+}
+
+/*1 . SECCION DEL HEADER*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.logo {
+  height: 75px;
+  width: 75px;
+}
+
+/*Opciones del menu en escritorio*/
+.rectangulo-menu {
+  background-color: black;
+  width: 36px;
+  height: 6px;
+}
+
+.menu-barritas {
+  display: grid;
+  row-gap: 5px;
+  align-content: center;
+
+  justify-content: center;
+}
+
+.opciones-menu-escritorio {
+  display: none;
+}
+
+@media (min-width: 650px) {
+  .opciones-menu-escritorio {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: "Roboto";
+    font-size: 24px;
+  }
+  .menu-barritas {
+    display: none;
+  }
+  .logo {
+    height: 100px;
+    width: 100px;
+  }
+  .header {
+    padding: 30px 70px;
+  }
+}
+
+/*SECCION DE BIENVENIDA*/
+.seccion-bienvenida-foto {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px 10px;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(209, 4, 255));
+}
+
+.foto-de-magui {
+  max-width: 350px;
+  max-height: 310px;
+}
+
+.texto-bienvenida-servicios {
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans";
+  font-size: 30px;
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  .seccion-bienvenida-foto {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0px 70px;
+  }
+  .foto-de-magui {
+    max-width: 450px;
+    max-height: 410px;
+  }
+
+  .texto-bienvenida-servicios {
+    font-family: "Open Sans";
+    font-size: 48px;
+    margin: 10px;
+  }
+}
+
+/*TEXTO QUE VA DEBAJO DE LA FOTO Y BIENVENIDA*/
+.seccion-texto-sobre-mi {
+  background-color: black;
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  padding: 20px;
+  justify-items: center;
+}
+
+.texto-en-fondo-negro {
+  color: aliceblue;
+}
+
+.parrafo-sobre-mi {
+  font-size: 16px;
+}
+
+.flecha-violeta {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.flecha-violeta-derecha {
+  display: none;
+  width: 200px;
+  height: 200px;
+}
+
+@media (min-width: 650px) {
+  .seccion-texto-sobre-mi {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 150px 250px;
+  }
+  .flecha-violeta {
+    display: none;
+  }
+  .flecha-violeta-derecha {
+    display: flex;
+  }
+  .parrafo-sobre-mi {
+    font-size: 24px;
+    min-width: 300px;
+  }
+}
+
+/*SECCION DE SERVICIOS*/
+
+.seccion-servicios {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 20px;
+  gap: 30px;
+}
+
+.titulo-mis-servicios {
+  font-size: 48px;
+}
+
+.flecha-violeta-hacia-abajo {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+@media (min-width: 650px) {
+  .servicios-escritorio {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    padding: 70px;
+  }
+  .flecha-violeta-hacia-abajo {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+/*SECCION DE FORMULARIO*/
+
+.formulario {
+  background-color: black;
+  display: grid;
+  grid-template-rows: auto auto;
+  padding: 70px 50px;
+}
+
+.titulo-servicios {
+  display: flex;
+  justify-content: center;
+}
+
+.formulario-interno {
+  display: grid;
+  grid-template-rows: auto;
+  font-size: 13px;
+  gap: 20px;
+}
+.fieldset {
+  display: grid;
+  grid-template-rows: auto auto;
+  font-size: 13px;
+}
+.seccion-textarea {
+  display: grid;
+  grid-template-rows: auto auto;
+  font-size: 13px;
+}
+
+.button {
+  display: grid;
+  grid-template-rows: auto;
+  background-color: rgb(188, 0, 250);
+  font-size: 14px;
+  border: none;
+  padding: 10px;
+}
+
+@media (min-width: 650px) {
+  .formulario {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    padding: 100px;
+  }
+  .formulario-interno {
+    max-width: 376px;
+    max-height: 450px;
+  }
+  .header-form {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+/*SECCION DE FOOTER*/
+
+.footer {
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(209, 4, 255));
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 40px;
+}
+
+.logo-footer {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-content: flex-start;
+  font-size: 13px;
+  margin: 0px;
+}
+
+.instagram-linkedin-github-logos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (min-width: 650px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px;
+  }
+}
